@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cust_style.css' %}">
+    <title>Data Display</title>
+</head>
+<body class="body">
+    <ul id="data-list">
+        <form method="post" action="/notifination/">
+            {% csrf_token %}
+            {% if not data %}
+            <h6 class="no_data">no data</h6>
+            {% else %}
+            <h6 class="no_data">All Data</h6>
+            {% endif %}
+            
+            {% for entry in data %}
+            <li class="all_intrest">
+                <span class="name">{{ entry.Name }}</span>
+                <button class="delete-btn" type="submit" name="id" value="{{ entry.id }}">Delete</button>
+                <div class="details">
+                    <p>Phone: {{ entry.Phone }}</p>
+                    <p>Place: {{ entry.Place }}</p>
+                    <p>No. of People: {{ entry.No_of_Members }}</p>
+                    <p>Check In: {{ entry.Check_In }}</p>
+                    <p>Check Out: {{ entry.Check_out }}</p>
+                    <p>Custom Message: {{ entry.Custom_msg }}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </form>
+
+   <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

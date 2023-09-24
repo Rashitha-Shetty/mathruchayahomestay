@@ -1,0 +1,54 @@
+.top_button button{
+    background-color: rgba(3, 3, 21, 0.898);
+    color: white;
+    border: none;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.top_button {
+    /* background-color: red; */
+    display: flex;
+    justify-content: end;
+    padding: 12px 40px;
+    position: sticky;
+    top: 700px;
+    z-index: 999;
+    width: fit-content;
+    float: right;
+
+}
+.top_button button span{
+    width: 20px;
+    position: absolute;
+    border: 1.5px solid white;
+}
+.top_button button span:first-child{
+    transform:translateX(6px) rotate(50deg);
+}
+.top_button button span:last-child{
+    transform: translateX(-7px) rotate(-50deg);
+}
+
+
+/* custom css for about us images by abhishek */
+
+
+.db{
+    margin: 0 auto;
+    /* border: 2px solid red; */
+    width: 90%;
+}
+
+.detail_p_mt{
+    font-size: 1.3em;
+  }
+  
+  
+  .col-lg-8{
+    font-size: 1.3em;
+  }

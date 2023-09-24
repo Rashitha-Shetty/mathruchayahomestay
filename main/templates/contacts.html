@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/cust_style.css' %}" />
+  </head>
+
+  <body>
+    {% for msg in messages %}
+    
+    <div class="message-box" id="messageBox">
+      <p class="message-text">{{msg}}</p>
+  </div>
+
+    {% endfor %}
+    <nav class="navigation"></nav>
+    <div class="container">
+      <form action="/contacts/" class="form" method="post">
+        {% csrf_token %}
+        <label for="">Name:</label>
+        <input type="text" placeholder="Enter a name" name="name" /><br /><br />
+        <label for="">Contact No:</label>
+        <input
+          type="text"
+          placeholder="Enter your contact"
+          name="phno"
+        /><br /><br />
+        <label for="">Check In:</label>
+        <input type="date" name="date_in" /><br /><br />
+        <label for="">Check Out:</label>
+        <input type="date" name="date_out" /><br /><br />
+        <label for="">Place:</label>
+        <input type="text" name="place" /><br /><br />
+        <label for="">Custom Msg:</label>
+        <input type="text" name="msg" /><br /><br />
+        <label for="">Number Of Members:</label>
+        <select id="members" name="people">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option></select
+        ><br /><br />
+
+        <input type="submit" />
+      </form>
+    </div>
+    <script>
+      // JavaScript function to show and hide the message box
+      function showMessage() {
+        var messageBox = document.getElementById('messageBox');
+        messageBox.style.display = 'block';
+        setTimeout(function() {
+            messageBox.style.display = 'none';
+        }, 5000); // 5000 milliseconds = 5 seconds
+    }
+
+    // Call showMessage function to display the message box
+    showMessage();
+    </script>
+  </body>
+</html>

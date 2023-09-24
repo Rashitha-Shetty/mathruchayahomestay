@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  background: #1d1c34;
+  color: rgba(255, 255, 255, 0.702);
+}
+
+/* Hide the details section by default */
+.details {
+  display: none;
+}
+
+/* Style list items */
+.all_intrest {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 8px auto;
+  cursor: pointer;
+  width: 60%;
+  font-size: larger;
+  font-family: monospace;
+  line-height: 26px;
+  font-weight: bold;
+  border-radius: 12px;
+
+}
+
+/* Style the delete button */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+  border-radius: 4px;
+}
+
+#data-list {
+  list-style-type: none;
+  /* Optionally, you can add padding and margin as needed */
+  padding: 0;
+  margin: 0;
+}
+.no_data{
+    display: block;
+    margin: 22px auto;
+    width: fit-content;
+    font-size: xx-large;
+    font-family: monospace;
+
+}
+
+
+
+
+
+/* Style for the message box */
+.message-box-alert {
+  width: 100%;
+  height: 2.5em;
+  background-color: #ffde4bdf; /* Green background color */
+  color: #000000; /* White text color */
+  text-align: center;
+  padding: 0.5em 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it's above other content */
+  display: none;
+}
+
+/* Style for the message text */
+.message-text {
+  font-size: 15px;
+  text-align: center;
+  justify-content: center;
+ 
+}
