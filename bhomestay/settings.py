@@ -22,11 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
+# SECRET_KEY = "56565656+59659894948484848"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
 ALLOWED_HOSTS = ['mathruchayabeachhomestay.com','www.mathruchayabeachhomestay.com']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition

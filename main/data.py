@@ -12,13 +12,6 @@ client = Client()
 # To load environment variables
 # load_dotenv()
 
-API_KEY="jhguy"
-
-PROJECT_ID="bbvy"
-
-DB_ID="vgh"
-
-C_ID="hbhbhh"
 
 
 
@@ -58,11 +51,8 @@ def get_doc():
   
     for each in result:
         l = {"Name": each["Name"],
-                             "Phone": each["Phone_No"],
-                             "Check_In": each["Check_In"],
-                             "Check_out": each["Check_out"],
-                             "No_of_Members": each["No-of-Members"],
-                             "Place": each["Place"],
+                             
+                             "Ratings": each["Ratings"],
                              "Custom_msg": each["Custom_msg"],
                              "id":each["$id"]
                              }
@@ -80,12 +70,3 @@ def delete_doc(doc_id):
     return True
 
 
-# data = {"Name": "paddu", "Phone_No": 9289277456,
-#         "Check_In": "18-09-2023", "Check_out": "20-09-2023", "No-of-Members": 5, "Custom_msg": "this is a test text","Place":"mangalore"}
-
-
-# print(add_doc(data))
-
-# print(get_doc())
-
-# print(delete_doc("6506977d3ff43f823a44"))
