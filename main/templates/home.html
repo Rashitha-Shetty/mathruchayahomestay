@@ -390,41 +390,67 @@
   <section class="contact_section " id="contact_stop">
     <div class="container-fluid">
 
-      <div class="row">
-        {% comment %} <div class="col-md-6 px-0">
-          <div class="img-box ">
+      {% comment %} <div class="row">
+         <div class="col-md-6 px-0">
+          {% comment %} <div class="img-box ">
             <img src="{% static 'images/logo.png' %}" class="box_img"  alt="about img">
           </div>
-        </div> {% endcomment %}
-        <!-- <div class="col-md-5 mx-auto">
+        </div>  
+        {% endcomment %}
+    <div class="col-md-5 mx-auto">
           <div class="form_container">
             <div class="heading_container heading_center">
-              <h2>Contact Us</h2>
+              <h2>Rate Us!</h2>
             </div>
             <form action="/contacts/" method="post">
               {% csrf_token %}
+             
+              {% comment %} <div class="form-row">
+                <div class="form-group col">
+                  <input type="text" class="form-control" placeholder="Your Place"  name="place" required/>
+                </div>
+              </div> {% endcomment %}
+              <div class="form-row">
+                {% comment %} <div class="form-group col">
+                  <input type="text" class="form-control" placeholder="Your Phone Number" name="phno" pattern="[0-9]{10}" maxlength="10" required oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
+                </div> {% endcomment %}
+
+          
+                {% comment %} <label>Rating</label> {% endcomment %}
+                <div class="form-group col">
+                  <fieldset class="rating">
+
+        <input type="radio" id="no-rate" class="input-no-rate" name="Ratings" value="0" checked="" aria-label="No rating.">
+
+        <input type="radio" id="rate1" name="Ratings" value="1">
+        <label for="rate1">1 star</label>
+
+        <input type="radio" id="rate2" name="Ratings" value="2">
+        <label for="rate2">2 stars</label>
+
+        <input type="radio" id="rate3" name="Ratings" value="3" checked>
+        <label for="rate3">3 stars</label>
+
+        <input type="radio" id="rate4" name="Ratings" value="4" >
+        <label for="rate4">4 stars</label>
+
+        <input type="radio" id="rate5" name="Ratings" value="5">
+        <label for="rate5">5 stars</label>
+
+        <span class="focus-ring"></span>
+      </fieldset>
+                </div> 
+              </div>
+
+
+
               <div class="form-row">
                 <div class="form-group col">
                   <input type="text" class="form-control" placeholder="Your Name"  name="name" required/>
                 </div>
               </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <input type="text" class="form-control" placeholder="Your Place"  name="place" required/>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <input type="text" class="form-control" placeholder="Your Phone Number" name="phno" pattern="[0-9]{10}" maxlength="10" required oninput="this.value = this.value.replace(/[^0-9]/g, '')" />
 
-
-
-                </div>
-                <div class="form-group col">
-                  <input type="number" class="form-control" placeholder="Number of Members" name="people" required  >
-                </div>
-              </div>
-              <div class="form-row">
+              {% comment %} <div class="form-row">
                 <div class="form-group col-lg-6">
                   <label for="coi">Check In Date</label>
                   <input type="date" id="coi" class="form-control" name="date_in" required>
@@ -434,20 +460,19 @@
                   <label for="cod">Check Out Date</label>
                   <input type="date" id="cod" class="form-control"  name="date_out" required>
                 </div>
-              </div>
+              </div> {% endcomment %}
               
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="message-box form-control" placeholder="Message (Optional)" name="msg"/>
+                  <input type="text" class="message-box form-control" placeholder="Feedback (Optional)" name="msg"/>
                 </div>
               </div>
               <div class="btn_box">
                 <input type="submit" />
               </div>
             </form>
-          </div> -->
+          </div> 
         </div>
-<<<<<<< HEAD
       </section>
         <div class="review_data">
           <ul id="data-list">
@@ -472,22 +497,21 @@
               
               </ul>
               {% if data %}
+
+              <form action="/feedbacks/" >
               <div class="center-container">
-                <button class="btnvw" onclick="window.location.href='{% url 'feedbacks' %}'">
-                    View More...
-                </button>
+                <input type="submit" value="View More..." name="ViewMore" class="btnvw">
+                    
+              
             </div>
+          </form>
             {% endif %}
             
             </div>
         
       
           </div>
-=======
-      </div>
->>>>>>> parent of a214ad9 (added feedback)
     </div>
-  </section>
   
   <section class="service_section layout_padding">
     <div class="container">
@@ -943,21 +967,26 @@
   <!-- jQery -->
   <script src="{% static 'js/jquery-3.4.1.min.js' %}" ></script>
   <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  {% comment %} <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> {% endcomment %}
 
   <!-- bootstrap js -->
   <script src="{% static 'js/bootstrap.js'%}"></script>
   <!-- owl slider -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <!-- nice select -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  {% comment %} <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script> {% endcomment %}
   <!-- custom js -->
   <script src="{% static 'js/custom.js'%}"></script>
   <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  {% comment %} <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script> {% endcomment %}
 
   <script src="{% static 'js/script.js'%}"></script>
   <!-- End Google Map -->
 </body>
 
 </html>
+
+
+
+
+

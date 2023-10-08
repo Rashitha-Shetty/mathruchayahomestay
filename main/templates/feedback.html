@@ -5,31 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/cust_style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     <title>Data Display</title>
 </head>
 <body class="body">
     <ul id="data-list">
-        <form method="post" action="/notifination/{{key}}">
-            {% csrf_token %}
+        
+        
             {% if not data %}
-            <h6 class="no_data">No Feedbacks</h6>
+            <h6 class="no_data"></h6>
             {% else %}
             <h6 class="no_data">Reviews</h6>
             {% endif %}
             
             {% for entry in data %}
             <li class="all_intrest">
-                <span class="name">⭐ {{ entry.Ratings }} / 5 </span>
-                <button class="delete-btn" type="submit" name="id" value="{{ entry.id }}">Delete</button>
-                <div class="details">
+                {% comment %} <button class="delete-btn" type="submit" name="id" value="{{ entry.id }}">Delete</button> {% endcomment %}
+                <div class="detail">
+                    <span class="name">⭐ {{ entry.Ratings }} / 5 </span>
                     <p>{{ entry.Name }}</p>
                     <p id="msbox">{{ entry.Custom_msg }}</p>
-                </div>
+                
+              </div>
             </li>
             {% endfor %}
+          
         </ul>
-    </form>
 
-   <script src="{% static 'js/script.js' %}"></script>
+   {% comment %} <script src="{% static 'js/script.js' %}"></script> {% endcomment %}
 </body>
 </html>
