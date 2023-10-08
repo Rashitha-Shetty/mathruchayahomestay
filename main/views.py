@@ -37,7 +37,7 @@ def notifination(request,key=""):
 def feedbacks(request):
     data=db.get_doc()
     data={'data':data}
-    return render(request, 'feedback.html',data)
+    return render(request, 'feedbacks.html',data)
 
 def home(request):
     if request.method == 'POST':
