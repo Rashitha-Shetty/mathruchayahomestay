@@ -20,11 +20,8 @@ from . import views
 urlpatterns = [
     path('',views.home ),
     path('contacts/',views.home,name="home"),
-<<<<<<< HEAD
-    path('feedbacks/',views.feedbacks,name="feedbacks"),
+    path('feedbacks/',views.feedbacks,name="feedback"),
     path('notifination/<key>',views.notifination,name="notifination"),
     path('notifination/',views.notifination,name="notifination"),
-=======
->>>>>>> parent of a214ad9 (added feedback)
    
 ]
