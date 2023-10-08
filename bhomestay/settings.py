@@ -31,7 +31,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = False
 
 ALLOWED_HOSTS = ['mathruchayabeachhomestay.com','www.mathruchayabeachhomestay.com']
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 
 
 # Application definition
