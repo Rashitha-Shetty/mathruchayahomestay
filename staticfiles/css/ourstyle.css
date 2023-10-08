@@ -52,3 +52,10 @@
   .col-lg-8{
     font-size: 1.3em;
   }
+
+  .range-slider {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
