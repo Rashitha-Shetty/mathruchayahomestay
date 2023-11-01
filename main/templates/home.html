@@ -172,6 +172,9 @@
        
 
       </div>
+      {% comment %} <div class="play_vid">
+
+      </div> {% endcomment %}
       <div class="service_container">
         <div class="carousel-wrap ">
           <div class="service_owl-carousel owl-carousel about_us">
@@ -183,8 +186,24 @@
               <img src="{% static 'images/hpi.jpg' %}" alt="" />
               
             </div>
+            <div class="item vid" id="i1">
+              <video autoplay muted  controls width="400" height="300">
+                <source src="{% static 'images/VID-20231031-WA0000.mp4' %}" type="video/mp4">
+          
+                Your browser does not support the video tag.
+              </video>
+              
+            </div>
+            
             <div class="item">
               <img src="{% static 'images/hpi10.jpg' %}" alt="" />
+              
+            </div>
+            <div class="item vid" id="i1">
+              <video autoplay muted controls width="400" height="300">
+                <source src="{% static 'images/VID-20231031-WA0001.mp4' %}" type="video/mp4" >
+                {% comment %} Your browser does not support the video tag. {% endcomment %}
+              </video> 
               
             </div>
             <div class="item">
@@ -212,7 +231,7 @@
               <img src="{% static 'images/k1.jpg' %}" alt="" />
              
             </div>
-           
+    
            <div class="item">
               <img src="{% static 'images/mathru1.jpg' %}" alt="" />
               
@@ -229,6 +248,8 @@
               <img src="{% static 'images/mathru4.jpg' %}" alt="" />
               
             </div>
+
+            
             
           </div>
         </div>
@@ -236,12 +257,10 @@
       
       
       <div id="about_stop">
-        
+
       </div>
     </div>
   </section>
-
-
   <section class="service_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center ">
@@ -981,6 +1000,7 @@
   <!-- Google Map -->
   {% comment %} <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script> {% endcomment %}
 
+  <script>let vid_src="{% static 'images/VID-20231031-WA0000.mp4' %}"</script>
   <script src="{% static 'js/script.js'%}"></script>
   <!-- End Google Map -->
 </body>

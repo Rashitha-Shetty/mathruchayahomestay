@@ -90,6 +90,7 @@
     width: 80%;
   }
 
+
 }
 
 @media (max-width: 576px) {
@@ -119,6 +120,18 @@
   float: right;
 
 }
+iframe{
+  width: 340px;
+  height: 250px;
+  object-fit: contain;
+
+}
+#close-iframe{
+  padding: 2px 10px;
+  font-size:10px ;
+  left: 75%;
+}
+
 
 
 }
