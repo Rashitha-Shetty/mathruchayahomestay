@@ -2,7 +2,7 @@ from appwrite.client import Client
 from appwrite.services.databases import Databases
 from appwrite.id import ID
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 
 
@@ -10,7 +10,7 @@ import os
 # Instantiating Appwrite Client
 client = Client()
 # To load environment variables
-# load_dotenv()
+load_dotenv()
 
 
 

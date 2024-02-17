@@ -3,8 +3,8 @@ from . import data as db
 from django.contrib import messages
 import os
 
-# from dotenv import load_dotenv
-# load_dotenv()
+from dotenv import load_dotenv
+load_dotenv()
 
 def top():
     data=db.get_doc()
