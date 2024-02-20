@@ -2,7 +2,7 @@ from appwrite.client import Client
 from appwrite.services.databases import Databases
 from appwrite.id import ID
 import os
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
 
